@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1610D6AC1AF4E34600B09EAE /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1610D6AB1AF4E34600B09EAE /* Parser.m */; };
+		1610D6AF1AF4E3E000B09EAE /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1610D6AE1AF4E3E000B09EAE /* TableViewCell.m */; };
+		1610D6BA1AF5426D00B09EAE /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1610D6B91AF5426D00B09EAE /* SWRevealViewController.m */; };
+		1610D6BD1AF563D500B09EAE /* SidebarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1610D6BC1AF563D500B09EAE /* SidebarTableViewController.m */; };
+		1610D6C01AF570D100B09EAE /* LienViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1610D6BF1AF570D100B09EAE /* LienViewController.m */; };
+		1610D6C21AF6188B00B09EAE /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1610D6C11AF6188B00B09EAE /* NotificationViewController.m */; };
+		1610D6C61AF6251000B09EAE /* ProposViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1610D6C51AF6251000B09EAE /* ProposViewController.m */; };
+		1633E9951A72571F005B63A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1633E9941A72571F005B63A6 /* main.m */; };
+		1633E9981A72571F005B63A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1633E9971A72571F005B63A6 /* AppDelegate.m */; };
+		1633E99B1A72571F005B63A6 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1633E99A1A72571F005B63A6 /* ListViewController.m */; };
+		1633E99E1A72571F005B63A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1633E99C1A72571F005B63A6 /* Main.storyboard */; };
+		1633E9A31A72571F005B63A6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1633E9A11A72571F005B63A6 /* LaunchScreen.xib */; };
+		1633E9AF1A725720005B63A6 /* Le_Pont_Chaban_Delmas_BordeauxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1633E9AE1A725720005B63A6 /* Le_Pont_Chaban_Delmas_BordeauxTests.m */; };
+		1648D8A01CD97126000C44B4 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1648D89F1CD97126000C44B4 /* Images-2.xcassets */; };
+		1648D8A21CD97133000C44B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1648D8A11CD97132000C44B4 /* Images.xcassets */; };
+		16B64DD51CDB6E6A00F77F7A /* Pushbots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B64DD41CDB6E6A00F77F7A /* Pushbots.framework */; };
+		16D244371B06674B006C5EBC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1633E9EA1A726A12005B63A6 /* SystemConfiguration.framework */; };
+		16D244381B066757006C5EBC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1633E9E81A726A04005B63A6 /* StoreKit.framework */; };
+		16D244391B066761006C5EBC /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1633E9E41A72696A005B63A6 /* CoreTelephony.framework */; };
+		16D2443A1B06676C006C5EBC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1610D6DB1B02893400B09EAE /* CoreGraphics.framework */; };
+		16D2443B1B066775006C5EBC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1633E9DE1A726942005B63A6 /* AudioToolbox.framework */; };
+		16D2443C1B066785006C5EBC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1633E9E61A72697D005B63A6 /* MessageUI.framework */; };
+		16D2443D1B06678F006C5EBC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1633E9E01A72694D005B63A6 /* AVFoundation.framework */; };
+		16D2443E1B066799006C5EBC /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1633E9DC1A726936005B63A6 /* AdSupport.framework */; };
+		16D2443F1B0667A1006C5EBC /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1610D6D21B02856800B09EAE /* EventKitUI.framework */; };
+		16D244401B0667AA006C5EBC /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1610D6D01B02855300B09EAE /* EventKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1633E9A91A725720005B63A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1633E9871A72571F005B63A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1633E98E1A72571F005B63A6;
+			remoteInfo = "Le Pont Chaban Delmas Bordeaux";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1610D6A81AF4E2B600B09EAE /* Parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
+		1610D6AB1AF4E34600B09EAE /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
+		1610D6AD1AF4E3A900B09EAE /* TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		1610D6AE1AF4E3E000B09EAE /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		1610D6B11AF4EBF000B09EAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1610D6B81AF5421A00B09EAE /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		1610D6B91AF5426D00B09EAE /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		1610D6BB1AF563B400B09EAE /* SidebarTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SidebarTableViewController.h; path = ../SidebarTableViewController.h; sourceTree = "<group>"; };
+		1610D6BC1AF563D500B09EAE /* SidebarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SidebarTableViewController.m; path = ../SidebarTableViewController.m; sourceTree = "<group>"; };
+		1610D6BE1AF570B700B09EAE /* LienViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LienViewController.h; sourceTree = "<group>"; };
+		1610D6BF1AF570D100B09EAE /* LienViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LienViewController.m; sourceTree = "<group>"; };
+		1610D6C11AF6188B00B09EAE /* NotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
+		1610D6C31AF618DC00B09EAE /* NotificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationViewController.h; sourceTree = "<group>"; };
+		1610D6C41AF624E800B09EAE /* ProposViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProposViewController.h; sourceTree = "<group>"; };
+		1610D6C51AF6251000B09EAE /* ProposViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProposViewController.m; sourceTree = "<group>"; };
+		1610D6D01B02855300B09EAE /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		1610D6D21B02856800B09EAE /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		1610D6DB1B02893400B09EAE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1633E98F1A72571F005B63A6 /* Le Pont Chaban Delmas Bordeaux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Le Pont Chaban Delmas Bordeaux.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1633E9931A72571F005B63A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1633E9941A72571F005B63A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1633E9961A72571F005B63A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1633E9971A72571F005B63A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1633E9991A72571F005B63A6 /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		1633E99A1A72571F005B63A6 /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		1633E99D1A72571F005B63A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1633E9A21A72571F005B63A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		1633E9A81A725720005B63A6 /* Le Pont Chaban Delmas BordeauxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Le Pont Chaban Delmas BordeauxTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1633E9AD1A725720005B63A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1633E9AE1A725720005B63A6 /* Le_Pont_Chaban_Delmas_BordeauxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Le_Pont_Chaban_Delmas_BordeauxTests.m; sourceTree = "<group>"; };
+		1633E9DC1A726936005B63A6 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		1633E9DE1A726942005B63A6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		1633E9E01A72694D005B63A6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1633E9E21A72695B005B63A6 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		1633E9E41A72696A005B63A6 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		1633E9E61A72697D005B63A6 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		1633E9E81A726A04005B63A6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		1633E9EA1A726A12005B63A6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1642CBF31B029CFE000FB9B2 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "../../../../../Downloads/GoogleMobileAdsSdkiOS-7.2.2 4/GoogleMobileAds.framework"; sourceTree = "<group>"; };
+		1648D89F1CD97126000C44B4 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
+		1648D8A11CD97132000C44B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		16B64DD41CDB6E6A00F77F7A /* Pushbots.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pushbots.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1633E98C1A72571F005B63A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16D244401B0667AA006C5EBC /* EventKit.framework in Frameworks */,
+				16D2443F1B0667A1006C5EBC /* EventKitUI.framework in Frameworks */,
+				16D2443E1B066799006C5EBC /* AdSupport.framework in Frameworks */,
+				16B64DD51CDB6E6A00F77F7A /* Pushbots.framework in Frameworks */,
+				16D2443D1B06678F006C5EBC /* AVFoundation.framework in Frameworks */,
+				16D2443C1B066785006C5EBC /* MessageUI.framework in Frameworks */,
+				16D2443B1B066775006C5EBC /* AudioToolbox.framework in Frameworks */,
+				16D2443A1B06676C006C5EBC /* CoreGraphics.framework in Frameworks */,
+				16D244391B066761006C5EBC /* CoreTelephony.framework in Frameworks */,
+				16D244381B066757006C5EBC /* StoreKit.framework in Frameworks */,
+				16D244371B06674B006C5EBC /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1633E9A51A725720005B63A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1610D6A71AF4E27F00B09EAE /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				1610D6A81AF4E2B600B09EAE /* Parser.h */,
+				1610D6AB1AF4E34600B09EAE /* Parser.m */,
+			);
+			name = Parser;
+			sourceTree = "<group>";
+		};
+		1610D6B01AF4EB8900B09EAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16B64DD41CDB6E6A00F77F7A /* Pushbots.framework */,
+				1610D6DB1B02893400B09EAE /* CoreGraphics.framework */,
+				1610D6D21B02856800B09EAE /* EventKitUI.framework */,
+				1610D6D01B02855300B09EAE /* EventKit.framework */,
+				1633E9EA1A726A12005B63A6 /* SystemConfiguration.framework */,
+				1610D6B11AF4EBF000B09EAE /* Foundation.framework */,
+				1633E9DC1A726936005B63A6 /* AdSupport.framework */,
+				1633E9DE1A726942005B63A6 /* AudioToolbox.framework */,
+				1633E9E01A72694D005B63A6 /* AVFoundation.framework */,
+				1633E9E21A72695B005B63A6 /* CoreFoundation.framework */,
+				1633E9E41A72696A005B63A6 /* CoreTelephony.framework */,
+				1633E9E61A72697D005B63A6 /* MessageUI.framework */,
+				1633E9E81A726A04005B63A6 /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1610D6B71AF541F700B09EAE /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1610D6B81AF5421A00B09EAE /* SWRevealViewController.h */,
+				1610D6B91AF5426D00B09EAE /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		1633E9861A72571F005B63A6 = {
+			isa = PBXGroup;
+			children = (
+				1642CBF31B029CFE000FB9B2 /* GoogleMobileAds.framework */,
+				1610D6B01AF4EB8900B09EAE /* Frameworks */,
+				1610D6A71AF4E27F00B09EAE /* Parser */,
+				1633E9911A72571F005B63A6 /* Le Pont Chaban Delmas Bordeaux */,
+				1633E9AB1A725720005B63A6 /* Le Pont Chaban Delmas BordeauxTests */,
+				1633E9901A72571F005B63A6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1633E9901A72571F005B63A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1633E98F1A72571F005B63A6 /* Le Pont Chaban Delmas Bordeaux.app */,
+				1633E9A81A725720005B63A6 /* Le Pont Chaban Delmas BordeauxTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1633E9911A72571F005B63A6 /* Le Pont Chaban Delmas Bordeaux */ = {
+			isa = PBXGroup;
+			children = (
+				1648D89F1CD97126000C44B4 /* Images-2.xcassets */,
+				1648D8A11CD97132000C44B4 /* Images.xcassets */,
+				1648D89E1CD9711B000C44B4 /* AppIcon.appiconset */,
+				1610D6BF1AF570D100B09EAE /* LienViewController.m */,
+				1610D6C11AF6188B00B09EAE /* NotificationViewController.m */,
+				1610D6C31AF618DC00B09EAE /* NotificationViewController.h */,
+				1610D6BE1AF570B700B09EAE /* LienViewController.h */,
+				1610D6BB1AF563B400B09EAE /* SidebarTableViewController.h */,
+				1610D6BC1AF563D500B09EAE /* SidebarTableViewController.m */,
+				1610D6B71AF541F700B09EAE /* SWRevealViewController */,
+				1610D6AD1AF4E3A900B09EAE /* TableViewCell.h */,
+				1610D6AE1AF4E3E000B09EAE /* TableViewCell.m */,
+				1633E9961A72571F005B63A6 /* AppDelegate.h */,
+				1633E9971A72571F005B63A6 /* AppDelegate.m */,
+				1633E9991A72571F005B63A6 /* ListViewController.h */,
+				1633E99A1A72571F005B63A6 /* ListViewController.m */,
+				1633E99C1A72571F005B63A6 /* Main.storyboard */,
+				1610D6C41AF624E800B09EAE /* ProposViewController.h */,
+				1610D6C51AF6251000B09EAE /* ProposViewController.m */,
+				1633E9A11A72571F005B63A6 /* LaunchScreen.xib */,
+				1633E9921A72571F005B63A6 /* Supporting Files */,
+			);
+			path = "Le Pont Chaban Delmas Bordeaux";
+			sourceTree = "<group>";
+		};
+		1633E9921A72571F005B63A6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1633E9931A72571F005B63A6 /* Info.plist */,
+				1633E9941A72571F005B63A6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1633E9AB1A725720005B63A6 /* Le Pont Chaban Delmas BordeauxTests */ = {
+			isa = PBXGroup;
+			children = (
+				1633E9AE1A725720005B63A6 /* Le_Pont_Chaban_Delmas_BordeauxTests.m */,
+				1633E9AC1A725720005B63A6 /* Supporting Files */,
+			);
+			path = "Le Pont Chaban Delmas BordeauxTests";
+			sourceTree = "<group>";
+		};
+		1633E9AC1A725720005B63A6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1633E9AD1A725720005B63A6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1648D89E1CD9711B000C44B4 /* AppIcon.appiconset */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppIcon.appiconset;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1633E98E1A72571F005B63A6 /* Le Pont Chaban Delmas Bordeaux */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1633E9B21A725720005B63A6 /* Build configuration list for PBXNativeTarget "Le Pont Chaban Delmas Bordeaux" */;
+			buildPhases = (
+				1633E98B1A72571F005B63A6 /* Sources */,
+				1633E98C1A72571F005B63A6 /* Frameworks */,
+				1633E98D1A72571F005B63A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Le Pont Chaban Delmas Bordeaux";
+			productName = "Le Pont Chaban Delmas Bordeaux";
+			productReference = 1633E98F1A72571F005B63A6 /* Le Pont Chaban Delmas Bordeaux.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1633E9A71A725720005B63A6 /* Le Pont Chaban Delmas BordeauxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1633E9B51A725720005B63A6 /* Build configuration list for PBXNativeTarget "Le Pont Chaban Delmas BordeauxTests" */;
+			buildPhases = (
+				1633E9A41A725720005B63A6 /* Sources */,
+				1633E9A51A725720005B63A6 /* Frameworks */,
+				1633E9A61A725720005B63A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1633E9AA1A725720005B63A6 /* PBXTargetDependency */,
+			);
+			name = "Le Pont Chaban Delmas BordeauxTests";
+			productName = "Le Pont Chaban Delmas BordeauxTests";
+			productReference = 1633E9A81A725720005B63A6 /* Le Pont Chaban Delmas BordeauxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1633E9871A72571F005B63A6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Italik Design";
+				TargetAttributes = {
+					1633E98E1A72571F005B63A6 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = P28L6TZ54T;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					1633E9A71A725720005B63A6 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 1633E98E1A72571F005B63A6;
+					};
+				};
+			};
+			buildConfigurationList = 1633E98A1A72571F005B63A6 /* Build configuration list for PBXProject "Le Pont Chaban Delmas Bordeaux" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1633E9861A72571F005B63A6;
+			productRefGroup = 1633E9901A72571F005B63A6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1633E98E1A72571F005B63A6 /* Le Pont Chaban Delmas Bordeaux */,
+				1633E9A71A725720005B63A6 /* Le Pont Chaban Delmas BordeauxTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1633E98D1A72571F005B63A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1648D8A01CD97126000C44B4 /* Images-2.xcassets in Resources */,
+				1648D8A21CD97133000C44B4 /* Images.xcassets in Resources */,
+				1633E99E1A72571F005B63A6 /* Main.storyboard in Resources */,
+				1633E9A31A72571F005B63A6 /* LaunchScreen.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1633E9A61A725720005B63A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1633E98B1A72571F005B63A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1610D6AC1AF4E34600B09EAE /* Parser.m in Sources */,
+				1610D6C61AF6251000B09EAE /* ProposViewController.m in Sources */,
+				1633E99B1A72571F005B63A6 /* ListViewController.m in Sources */,
+				1633E9981A72571F005B63A6 /* AppDelegate.m in Sources */,
+				1610D6AF1AF4E3E000B09EAE /* TableViewCell.m in Sources */,
+				1633E9951A72571F005B63A6 /* main.m in Sources */,
+				1610D6C21AF6188B00B09EAE /* NotificationViewController.m in Sources */,
+				1610D6BA1AF5426D00B09EAE /* SWRevealViewController.m in Sources */,
+				1610D6C01AF570D100B09EAE /* LienViewController.m in Sources */,
+				1610D6BD1AF563D500B09EAE /* SidebarTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1633E9A41A725720005B63A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1633E9AF1A725720005B63A6 /* Le_Pont_Chaban_Delmas_BordeauxTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1633E9AA1A725720005B63A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1633E98E1A72571F005B63A6 /* Le Pont Chaban Delmas Bordeaux */;
+			targetProxy = 1633E9A91A725720005B63A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1633E99C1A72571F005B63A6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1633E99D1A72571F005B63A6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1633E9A11A72571F005B63A6 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1633E9A21A72571F005B63A6 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1633E9B01A725720005B63A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Marlene charlet (P28L6TZ54T)";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1633E9B11A725720005B63A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Marlene charlet (P28L6TZ54T)";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1633E9B31A725720005B63A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
+				INFOPLIST_FILE = "Le Pont Chaban Delmas Bordeaux/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourappnow.26488;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		1633E9B41A725720005B63A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
+				INFOPLIST_FILE = "Le Pont Chaban Delmas Bordeaux/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourappnow.26488;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		1633E9B61A725720005B63A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Le Pont Chaban Delmas BordeauxTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "italikdesign.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Le Pont Chaban Delmas Bordeaux.app/Le Pont Chaban Delmas Bordeaux";
+			};
+			name = Debug;
+		};
+		1633E9B71A725720005B63A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Le Pont Chaban Delmas BordeauxTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "italikdesign.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Le Pont Chaban Delmas Bordeaux.app/Le Pont Chaban Delmas Bordeaux";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1633E98A1A72571F005B63A6 /* Build configuration list for PBXProject "Le Pont Chaban Delmas Bordeaux" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1633E9B01A725720005B63A6 /* Debug */,
+				1633E9B11A725720005B63A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1633E9B21A725720005B63A6 /* Build configuration list for PBXNativeTarget "Le Pont Chaban Delmas Bordeaux" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1633E9B31A725720005B63A6 /* Debug */,
+				1633E9B41A725720005B63A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1633E9B51A725720005B63A6 /* Build configuration list for PBXNativeTarget "Le Pont Chaban Delmas BordeauxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1633E9B61A725720005B63A6 /* Debug */,
+				1633E9B71A725720005B63A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1633E9871A72571F005B63A6 /* Project object */;
+}
