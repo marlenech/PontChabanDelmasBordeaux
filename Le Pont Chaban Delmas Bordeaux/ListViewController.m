@@ -35,12 +35,18 @@
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine; // or you have the previous 'None' style...
+    self.tableView.separatorColor = [UIColor grayColor];
+    self.tableView.rowHeight = 100;
+    self.tableView.backgroundColor = [UIColor clearColor];
     
     self.title = @"Le Pont Chaban Delmas";
+    
     
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
@@ -49,7 +55,7 @@
         [self.sidebarButton setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
-
+    
     
     self.imageCache = [[NSCache alloc] init];
     
@@ -65,10 +71,10 @@
 
 - (void)parse
 {
-    NSURL *url = [NSURL URLWithString:@"http://www.trouvetonjob.fr/pontchaban.xml"];
+    NSURL *url = [NSURL URLWithString:@"http://www.trouvetonjob.fr/pontchabantest.xml"];
     Parser *parser = [[Parser alloc] initWithContentsOfURL:url];
     parser.rowElementName = @"item";
-    parser.elementNames = @[@"title", @"description", @"link", @"pubDate"];
+    parser.elementNames = @[@"title", @"description", @"heure", @"link", @"pubDate"];
     [parser parse];
     
     self.objects = parser.items;
@@ -116,6 +122,7 @@
     NSDictionary *object = _objects[indexPath.row];
     cell.cellTitle.text = object[@"title"];
     cell.cellSubtitle.text = object[@"description"];
+    cell.cellHeure.text = object[@"heure"];
     
     cell.cellImageView.image = nil;
     [self tableView:tableView updateImageForCell:cell indexPath:indexPath];

@@ -17,11 +17,11 @@
 		1633E9951A72571F005B63A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1633E9941A72571F005B63A6 /* main.m */; };
 		1633E9981A72571F005B63A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1633E9971A72571F005B63A6 /* AppDelegate.m */; };
 		1633E99B1A72571F005B63A6 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1633E99A1A72571F005B63A6 /* ListViewController.m */; };
-		1633E99E1A72571F005B63A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1633E99C1A72571F005B63A6 /* Main.storyboard */; };
 		1633E9A31A72571F005B63A6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1633E9A11A72571F005B63A6 /* LaunchScreen.xib */; };
 		1633E9AF1A725720005B63A6 /* Le_Pont_Chaban_Delmas_BordeauxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1633E9AE1A725720005B63A6 /* Le_Pont_Chaban_Delmas_BordeauxTests.m */; };
 		1648D8A01CD97126000C44B4 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1648D89F1CD97126000C44B4 /* Images-2.xcassets */; };
 		1648D8A21CD97133000C44B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1648D8A11CD97132000C44B4 /* Images.xcassets */; };
+		16B2ECD21E351E0900594C3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B2ECD01E351E0900594C3E /* Main.storyboard */; };
 		16B64DD51CDB6E6A00F77F7A /* Pushbots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B64DD41CDB6E6A00F77F7A /* Pushbots.framework */; };
 		16D244371B06674B006C5EBC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1633E9EA1A726A12005B63A6 /* SystemConfiguration.framework */; };
 		16D244381B066757006C5EBC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1633E9E81A726A04005B63A6 /* StoreKit.framework */; };
@@ -71,7 +71,6 @@
 		1633E9971A72571F005B63A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1633E9991A72571F005B63A6 /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		1633E99A1A72571F005B63A6 /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
-		1633E99D1A72571F005B63A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1633E9A21A72571F005B63A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1633E9A81A725720005B63A6 /* Le Pont Chaban Delmas BordeauxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Le Pont Chaban Delmas BordeauxTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1633E9AD1A725720005B63A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +86,7 @@
 		1642CBF31B029CFE000FB9B2 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "../../../../../Downloads/GoogleMobileAdsSdkiOS-7.2.2 4/GoogleMobileAds.framework"; sourceTree = "<group>"; };
 		1648D89F1CD97126000C44B4 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		1648D8A11CD97132000C44B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		16B2ECD11E351E0900594C3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../PontChaban/Le Pont Chaban Delmas Bordeaux/Le Pont Chaban Delmas Bordeaux/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		16B64DD41CDB6E6A00F77F7A /* Pushbots.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pushbots.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -197,7 +197,7 @@
 				1633E9971A72571F005B63A6 /* AppDelegate.m */,
 				1633E9991A72571F005B63A6 /* ListViewController.h */,
 				1633E99A1A72571F005B63A6 /* ListViewController.m */,
-				1633E99C1A72571F005B63A6 /* Main.storyboard */,
+				16B2ECD01E351E0900594C3E /* Main.storyboard */,
 				1610D6C41AF624E800B09EAE /* ProposViewController.h */,
 				1610D6C51AF6251000B09EAE /* ProposViewController.m */,
 				1633E9A11A72571F005B63A6 /* LaunchScreen.xib */,
@@ -326,8 +326,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1648D8A01CD97126000C44B4 /* Images-2.xcassets in Resources */,
+				16B2ECD21E351E0900594C3E /* Main.storyboard in Resources */,
 				1648D8A21CD97133000C44B4 /* Images.xcassets in Resources */,
-				1633E99E1A72571F005B63A6 /* Main.storyboard in Resources */,
 				1633E9A31A72571F005B63A6 /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,20 +378,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1633E99C1A72571F005B63A6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1633E99D1A72571F005B63A6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1633E9A11A72571F005B63A6 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1633E9A21A72571F005B63A6 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		16B2ECD01E351E0900594C3E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16B2ECD11E351E0900594C3E /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
