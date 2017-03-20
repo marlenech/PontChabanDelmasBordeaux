@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import <OneSignal/OneSignal.h>
+
 
 @interface AppDelegate ()
 
@@ -16,22 +18,48 @@
 @implementation AppDelegate
 
 
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.PushbotsClient = [[Pushbots alloc] initWithAppId:@"534a5f821d0ab1d3048b457a" prompt:YES];
-    [self.PushbotsClient trackPushNotificationOpenedWithLaunchOptions:launchOptions];
-    NSDictionary *userInfo = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
-    if (userInfo) {
-        //Capture notification data e.g. badge, alert and sound
-        NSDictionary *aps = [userInfo objectForKey:@"aps"];
+    
+   
+    [OneSignal initWithLaunchOptions:launchOptions appId:@"de783149-ac22-4a99-a757-355f92db1c68" handleNotificationReceived:^(OSNotification *notification) {
+        NSLog(@"Received Notification - %@", notification.payload.notificationID);
+    } handleNotificationAction:^(OSNotificationOpenedResult *result) {
         
-        if (aps) {
-            NSString *alertMsg = [aps objectForKey:@"alert"];
-            NSLog(@"Notification message: %@", alertMsg);
+        // This block gets called when the user reacts to a notification received
+        OSNotificationPayload* payload = result.notification.payload;
+        
+        NSString* messageTitle = @"Le Pont Chaban Delmas";
+        NSString* fullMessage = [payload.body copy];
+        
+        if (payload.additionalData) {
+            
+            if(payload.title)
+                messageTitle = payload.title;
+            
+            if (result.action.actionID)
+                fullMessage = [fullMessage stringByAppendingString:[NSString stringWithFormat:@"\nPressed ButtonId:%@", result.action.actionID]];
         }
         
-        //Capture custom fields
-        NSString* articleId = [userInfo objectForKey:@"articleId"];
-    }
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:messageTitle
+                                                            message:fullMessage
+                                                           delegate:self
+                                                  cancelButtonTitle:@"Close"
+                                                  otherButtonTitles:nil, nil];
+        [alertView show];
+        
+    } settings:@{kOSSettingsKeyInFocusDisplayOption : @(OSNotificationDisplayTypeNotification), kOSSettingsKeyAutoPrompt : @YES}];
+    
+    [OneSignal IdsAvailable:^(NSString *userId, NSString *pushToken) {
+        if(pushToken) {
+            NSLog(@"Received push token - %@", pushToken);
+            NSLog(@"User ID - %@", userId);
+        }
+    }];
+ 
+    [GADMobileAds configureWithApplicationID:@"ca-app-pub-6606385851683433/7724698904"];
+    
 
     return YES;
     //Track Push notification opens while launching the app form it
@@ -44,8 +72,7 @@
 {
     //Track notification only if the application opened from Background by clicking on the notification.
     if (application.applicationState == UIApplicationStateInactive) {
-        [self.PushbotsClient trackPushNotificationOpenedWithPayload:userInfo];
-    }
+            }
     
     //The application was already active when the user got the notification, just show an alert.
     //That should *not* be considered open from Push.
@@ -64,49 +91,16 @@
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     // Register the deviceToken on Pushbots
-    [self.PushbotsClient registerOnPushbots:deviceToken];
-}
-
--(void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
-    NSLog(@"Notification Registration Error %@", [error description]);
+    
 }
 
 
 
 
--(void) receivedPush:(NSDictionary *)userInfo {
-    //Try to get Notification from [didReceiveRemoteNotification] dictionary
-    NSDictionary *pushNotification = [userInfo objectForKey:@"aps"];
-    
-    if(!pushNotification) {
-        //Try as launchOptions dictionary
-        userInfo = [userInfo objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
-        pushNotification = [userInfo objectForKey:@"aps"];
-    }
-    
-    if (!pushNotification)
-        return;
-    
-    //Get notification payload data [Custom fields]
-    
-    //For example: get viewControllerIdentifer for deep linking
-    NSString* notificationViewControllerIdentifer = [userInfo objectForKey:@"notification_identifier"];
-    
-    //Set the default viewController Identifer
-    if(!notificationViewControllerIdentifer)
-        notificationViewControllerIdentifer = @"home";
-    
-    UIAlertView *message =
-    [[UIAlertView alloc] initWithTitle:@"Notification"
-                               message:[pushNotification valueForKey:@"alert"]
-                              delegate:self
-                     cancelButtonTitle:nil
-                     otherButtonTitles: @"OK",
-     nil];
-    
-    [message show];
-    return;
-}
+
+
+
+
 
 - (void)application:(UIApplication *)application
 didReceiveRemoteNotification:(NSDictionary *)userInfo  fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))handler {

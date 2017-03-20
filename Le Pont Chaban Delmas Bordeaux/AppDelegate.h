@@ -7,12 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Pushbots/Pushbots.h>
+#import <UserNotifications/UserNotifications.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+
+
+@import GoogleMobileAds;
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UNUserNotificationCenterDelegate>
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) Pushbots *PushbotsClient;
+
 
 
 @end

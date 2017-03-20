@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@import GoogleMobileAds;
+
+
 @interface ListViewController : UITableViewController
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+@property (weak, nonatomic) IBOutlet GADBannerView *bannerView;
 
 
 

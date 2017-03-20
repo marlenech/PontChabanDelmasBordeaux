@@ -11,6 +11,7 @@
 @interface ProposViewController : UIViewController
 
 -(IBAction)link;
+-(IBAction)noter;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 

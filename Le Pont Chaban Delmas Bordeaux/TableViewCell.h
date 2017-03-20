@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *cellTitle;
 @property (weak, nonatomic) IBOutlet UILabel *cellSubtitle;
 @property (weak, nonatomic) IBOutlet UILabel *cellHeure;
+@property (weak, nonatomic) IBOutlet UILabel *cellPassage;
 @property (weak, nonatomic) IBOutlet UIImageView *cellImageView;
 
 

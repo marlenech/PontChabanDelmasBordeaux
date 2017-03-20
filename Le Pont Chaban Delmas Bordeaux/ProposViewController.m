@@ -19,6 +19,11 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/ItalikDesign"]];
      
 }
+-(IBAction)noter{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/fr/app/le-pont-chaban-delmas-bordeaux/id663031214?mt=8"]];
+    
+}
+
 
 
 - (void)viewDidLoad {

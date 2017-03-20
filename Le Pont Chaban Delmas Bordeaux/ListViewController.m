@@ -15,7 +15,7 @@
 
 #import "TableViewCell.h"
 
-
+@import GoogleMobileAds;
 
 @interface ListViewController ()
 
@@ -39,13 +39,30 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   
+    
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine; // or you have the previous 'None' style...
     self.tableView.separatorColor = [UIColor grayColor];
-    self.tableView.rowHeight = 100;
+    self.tableView.rowHeight = 150;
     self.tableView.backgroundColor = [UIColor clearColor];
     
     self.title = @"Le Pont Chaban Delmas";
+    
+    // Replace this ad unit ID with your own ad unit ID.
+    self.bannerView.adUnitID = @"ca-app-pub-6606385851683433/7724698904";
+    self.bannerView.rootViewController = self;
+    GADBannerView *adView = [[GADBannerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 50, 320, 50)];
+     [self.view addSubview:adView];
+    
+    GADRequest *request = [GADRequest request];
+    // Requests test ads on devices you specify. Your test device ID is printed to the console when
+    // an ad request is made. GADBannerView automatically returns test ads when running on a
+    // simulator.
+    request.testDevices = @[
+                            @"2077ef9a63d2b398840261c8221a0c9a"  // Eric's iPod Touch
+                            ];
+    [self.bannerView loadRequest:request];
+    
+    
     
     
     SWRevealViewController *revealViewController = self.revealViewController;
@@ -55,7 +72,7 @@
         [self.sidebarButton setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
-
+    
     
     self.imageCache = [[NSCache alloc] init];
     
@@ -71,10 +88,10 @@
 
 - (void)parse
 {
-    NSURL *url = [NSURL URLWithString:@"http://www.trouvetonjob.fr/pontchabantest.xml"];
+    NSURL *url = [NSURL URLWithString:@"http://trouvetou.cluster014.ovh.net/pontchabantest.xml"];
     Parser *parser = [[Parser alloc] initWithContentsOfURL:url];
     parser.rowElementName = @"item";
-    parser.elementNames = @[@"title", @"description", @"heure", @"link", @"pubDate"];
+    parser.elementNames = @[@"title", @"description", @"heure", @"passage", @"link", @"pubDate"];
     [parser parse];
     
     self.objects = parser.items;
@@ -123,6 +140,7 @@
     cell.cellTitle.text = object[@"title"];
     cell.cellSubtitle.text = object[@"description"];
     cell.cellHeure.text = object[@"heure"];
+    cell.cellPassage.text = object[@"passage"];
     
     cell.cellImageView.image = nil;
     [self tableView:tableView updateImageForCell:cell indexPath:indexPath];
@@ -176,4 +194,3 @@
 }
 
 @end
-
