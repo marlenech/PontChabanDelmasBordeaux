@@ -9,6 +9,12 @@
 #import "AppDelegate.h"
 
 #import <OneSignal/OneSignal.h>
+#import "PDRatingsView.h"
+
+
+#define kAppUsedCount @"AppUsedCount"
+#define kRemindMeLater @"RemindMeLater"
+
 
 
 @interface AppDelegate ()
@@ -22,43 +28,44 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-   
-    [OneSignal initWithLaunchOptions:launchOptions appId:@"de783149-ac22-4a99-a757-355f92db1c68" handleNotificationReceived:^(OSNotification *notification) {
-        NSLog(@"Received Notification - %@", notification.payload.notificationID);
-    } handleNotificationAction:^(OSNotificationOpenedResult *result) {
-        
-        // This block gets called when the user reacts to a notification received
-        OSNotificationPayload* payload = result.notification.payload;
-        
-        NSString* messageTitle = @"Le Pont Chaban Delmas";
-        NSString* fullMessage = [payload.body copy];
-        
-        if (payload.additionalData) {
-            
-            if(payload.title)
-                messageTitle = payload.title;
-            
-            if (result.action.actionID)
-                fullMessage = [fullMessage stringByAppendingString:[NSString stringWithFormat:@"\nPressed ButtonId:%@", result.action.actionID]];
-        }
-        
-        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:messageTitle
-                                                            message:fullMessage
-                                                           delegate:self
-                                                  cancelButtonTitle:@"Close"
-                                                  otherButtonTitles:nil, nil];
-        [alertView show];
-        
-    } settings:@{kOSSettingsKeyInFocusDisplayOption : @(OSNotificationDisplayTypeNotification), kOSSettingsKeyAutoPrompt : @YES}];
-    
-    [OneSignal IdsAvailable:^(NSString *userId, NSString *pushToken) {
-        if(pushToken) {
-            NSLog(@"Received push token - %@", pushToken);
-            NSLog(@"User ID - %@", userId);
-        }
-    }];
- 
     [GADMobileAds configureWithApplicationID:@"ca-app-pub-6606385851683433/7724698904"];
+   
+    
+        
+        [OneSignal initWithLaunchOptions:launchOptions
+                                   appId:@"de783149-ac22-4a99-a757-355f92db1c68"];
+        
+        
+        
+        
+        NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
+        
+        NSString *pontTypeAq = @"switchKey";
+    
+        
+        if([standardDefaults objectForKey:kRemindMeLater] == nil) {
+            [standardDefaults setBool:YES forKey:kRemindMeLater];
+        }
+        
+        if([standardDefaults boolForKey:pontTypeAq] == YES) {
+            [OneSignal setSubscription:true];
+            
+            // Do Something
+                    }
+        
+        else if ([standardDefaults objectForKey:pontTypeAq] == nil){
+            [OneSignal setSubscription:true];
+            
+        }
+        else {
+            [OneSignal setSubscription:false];
+        }
+        
+    
+        
+        
+ 
+    
     
 
     return YES;
@@ -66,46 +73,6 @@
     
    
     
-}
-
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
-{
-    //Track notification only if the application opened from Background by clicking on the notification.
-    if (application.applicationState == UIApplicationStateInactive) {
-            }
-    
-    //The application was already active when the user got the notification, just show an alert.
-    //That should *not* be considered open from Push.
-    if (application.applicationState == UIApplicationStateActive) {
-        NSDictionary *notificationDict = [userInfo objectForKey:@"aps"];
-        NSString *alertString = [notificationDict objectForKey:@"alert"];
-        UIAlertView *alert = [[UIAlertView alloc]
-                              initWithTitle:@"Push Notification Received" message:alertString delegate:self
-                              cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
-        [alert show];
-    }
-
-}
-
-
-
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    // Register the deviceToken on Pushbots
-    
-}
-
-
-
-
-
-
-
-
-
-- (void)application:(UIApplication *)application
-didReceiveRemoteNotification:(NSDictionary *)userInfo  fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))handler {
-    // .. Process notification data
-    handler(UIBackgroundFetchResultNewData);
 }
 
 
@@ -125,6 +92,18 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo  fetchCompletionHandler:(v
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    //ALERTVIEW RATING
+    
+    NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
+    
+    if([standardDefaults boolForKey:kRemindMeLater] == YES) {
+        
+        UIViewController *rootViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+        
+        [PDRatingsView ratingsWithAppId:@"663031214" countAppUsed:5 onViewController:rootViewController];
+    }
+    
+    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

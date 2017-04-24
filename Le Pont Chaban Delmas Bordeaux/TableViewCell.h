@@ -19,7 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *cellHeure;
 @property (weak, nonatomic) IBOutlet UILabel *cellPassage;
 @property (weak, nonatomic) IBOutlet UIImageView *cellImageView;
-
+@property (weak, nonatomic) IBOutlet UIView *shadowView;
 
 
 @end

@@ -15,19 +15,52 @@
 
 @implementation ProposViewController
 
+#define URLEMail @"mailto:italikdesignbordeaux@gmail.com?subject=title&body=content"
+
+-(IBAction)mail{
+    NSString *url = [URLEMail stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding ];
+    [[UIApplication sharedApplication]  openURL: [NSURL URLWithString: url]];
+    
+    
+}
+
+
 -(IBAction)link{
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/ItalikDesign"]];
-     
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/marlenech/PontChabanDelmas/blob/master/licence"]];
+    
 }
 -(IBAction)noter{
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/fr/app/le-pont-chaban-delmas-bordeaux/id663031214?mt=8"]];
     
 }
 
+-(IBAction)paquebots{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.BordeauxPaquebots.com"]];
+    
+}
+
+-(IBAction)bordeaux{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://sedeplacer.bordeaux-metropole.fr/Toutes-les-infos-circulation/Pont-Chaban-Delmas-Fermetures"]];
+    
+}
+-(IBAction)twitter{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/SebD333"]];
+    
+}
+-(IBAction)data{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://data.bordeaux-metropole.fr"]];
+    
+}
+
+
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    
+    self.title = @"A Propos";
     
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
@@ -40,6 +73,12 @@
     
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    if (scrollView.contentOffset.y > 60) {
+        [scrollView setContentOffset:CGPointMake(0, 60)];
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

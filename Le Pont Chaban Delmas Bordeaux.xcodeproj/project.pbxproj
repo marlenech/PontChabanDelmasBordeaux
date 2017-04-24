@@ -27,6 +27,10 @@
 		1698E2891E7B484B00B25C52 /* OneSignal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1698E2881E7B484B00B25C52 /* OneSignal.framework */; };
 		169E16B31E6C6D800036F38B /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 169E16B21E6C6D800036F38B /* iAd.framework */; };
 		16A3681F1CE117D3008C3879 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16A3681E1CE117D3008C3879 /* Default-568h@2x.png */; };
+		16D220841EACFDAD00A9884C /* ListViewControllersansPub.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D220831EACFDAD00A9884C /* ListViewControllersansPub.m */; };
+		16D220871EAD076800A9884C /* PDRatingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D220861EAD076800A9884C /* PDRatingsView.m */; };
+		16D2208A1EAD077F00A9884C /* AchatValideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D220891EAD077F00A9884C /* AchatValideController.m */; };
+		16D2208D1EAD07EC00A9884C /* SanspubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D2208C1EAD07EC00A9884C /* SanspubViewController.m */; };
 		16D244371B06674B006C5EBC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1633E9EA1A726A12005B63A6 /* SystemConfiguration.framework */; };
 		16D244381B066757006C5EBC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1633E9E81A726A04005B63A6 /* StoreKit.framework */; };
 		16D244391B066761006C5EBC /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1633E9E41A72696A005B63A6 /* CoreTelephony.framework */; };
@@ -113,6 +117,14 @@
 		1698E2881E7B484B00B25C52 /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = Pods/OneSignal/iOS_SDK/OneSignalSDK/Framework/OneSignal.framework; sourceTree = "<group>"; };
 		169E16B21E6C6D800036F38B /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		16A3681E1CE117D3008C3879 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		16D220821EACFDAD00A9884C /* ListViewControllersansPub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewControllersansPub.h; sourceTree = "<group>"; };
+		16D220831EACFDAD00A9884C /* ListViewControllersansPub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewControllersansPub.m; sourceTree = "<group>"; };
+		16D220851EAD076800A9884C /* PDRatingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDRatingsView.h; sourceTree = "<group>"; };
+		16D220861EAD076800A9884C /* PDRatingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDRatingsView.m; sourceTree = "<group>"; };
+		16D220881EAD077F00A9884C /* AchatValideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AchatValideController.h; sourceTree = "<group>"; };
+		16D220891EAD077F00A9884C /* AchatValideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AchatValideController.m; sourceTree = "<group>"; };
+		16D2208B1EAD07EC00A9884C /* SanspubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanspubViewController.h; sourceTree = "<group>"; };
+		16D2208C1EAD07EC00A9884C /* SanspubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanspubViewController.m; sourceTree = "<group>"; };
 		4672CC9AD3E2772B5DB9CD73 /* Pods-Le Pont Chaban Delmas Bordeaux-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Le Pont Chaban Delmas Bordeaux-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Le Pont Chaban Delmas Bordeaux-OneSignalNotificationServiceExtension/Pods-Le Pont Chaban Delmas Bordeaux-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		8F5E65F2E3FFFFF66DF69B33 /* Pods-Le Pont Chaban Delmas Bordeaux-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Le Pont Chaban Delmas Bordeaux-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Le Pont Chaban Delmas Bordeaux-OneSignalNotificationServiceExtension/Pods-Le Pont Chaban Delmas Bordeaux-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		C52EB04C1A01346675FE46D7 /* Pods-Le Pont Chaban Delmas BordeauxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Le Pont Chaban Delmas BordeauxTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Le Pont Chaban Delmas BordeauxTests/Pods-Le Pont Chaban Delmas BordeauxTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -229,7 +241,11 @@
 				1648D8A11CD97132000C44B4 /* Images.xcassets */,
 				1648D89E1CD9711B000C44B4 /* AppIcon.appiconset */,
 				1610D6BF1AF570D100B09EAE /* LienViewController.m */,
+				16D220851EAD076800A9884C /* PDRatingsView.h */,
+				16D220861EAD076800A9884C /* PDRatingsView.m */,
 				1610D6C11AF6188B00B09EAE /* NotificationViewController.m */,
+				16D220881EAD077F00A9884C /* AchatValideController.h */,
+				16D220891EAD077F00A9884C /* AchatValideController.m */,
 				1610D6C31AF618DC00B09EAE /* NotificationViewController.h */,
 				1610D6BE1AF570B700B09EAE /* LienViewController.h */,
 				1610D6BB1AF563B400B09EAE /* SidebarTableViewController.h */,
@@ -238,6 +254,8 @@
 				1610D6AD1AF4E3A900B09EAE /* TableViewCell.h */,
 				1610D6AE1AF4E3E000B09EAE /* TableViewCell.m */,
 				1633E9961A72571F005B63A6 /* AppDelegate.h */,
+				16D2208B1EAD07EC00A9884C /* SanspubViewController.h */,
+				16D2208C1EAD07EC00A9884C /* SanspubViewController.m */,
 				1633E9971A72571F005B63A6 /* AppDelegate.m */,
 				1633E9991A72571F005B63A6 /* ListViewController.h */,
 				1633E99A1A72571F005B63A6 /* ListViewController.m */,
@@ -246,6 +264,8 @@
 				1610D6C51AF6251000B09EAE /* ProposViewController.m */,
 				1633E9A11A72571F005B63A6 /* LaunchScreen.xib */,
 				1633E9921A72571F005B63A6 /* Supporting Files */,
+				16D220821EACFDAD00A9884C /* ListViewControllersansPub.h */,
+				16D220831EACFDAD00A9884C /* ListViewControllersansPub.m */,
 			);
 			path = "Le Pont Chaban Delmas Bordeaux";
 			sourceTree = "<group>";
@@ -512,12 +532,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				1610D6AC1AF4E34600B09EAE /* Parser.m in Sources */,
+				16D2208D1EAD07EC00A9884C /* SanspubViewController.m in Sources */,
+				16D2208A1EAD077F00A9884C /* AchatValideController.m in Sources */,
 				1610D6C61AF6251000B09EAE /* ProposViewController.m in Sources */,
 				1633E99B1A72571F005B63A6 /* ListViewController.m in Sources */,
 				1633E9981A72571F005B63A6 /* AppDelegate.m in Sources */,
 				1610D6AF1AF4E3E000B09EAE /* TableViewCell.m in Sources */,
+				16D220871EAD076800A9884C /* PDRatingsView.m in Sources */,
 				1633E9951A72571F005B63A6 /* main.m in Sources */,
 				1610D6C21AF6188B00B09EAE /* NotificationViewController.m in Sources */,
+				16D220841EACFDAD00A9884C /* ListViewControllersansPub.m in Sources */,
 				1610D6BA1AF5426D00B09EAE /* SWRevealViewController.m in Sources */,
 				1610D6C01AF570D100B09EAE /* LienViewController.m in Sources */,
 				1610D6BD1AF563D500B09EAE /* SidebarTableViewController.m in Sources */,
@@ -602,7 +626,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -643,7 +667,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
@@ -668,7 +692,7 @@
 					"$(PROJECT_DIR)/Pods/OneSignal/iOS_SDK/OneSignalSDK/Framework",
 				);
 				INFOPLIST_FILE = "Le Pont Chaban Delmas Bordeaux/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -676,7 +700,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -697,7 +721,7 @@
 					"$(PROJECT_DIR)/Pods/OneSignal/iOS_SDK/OneSignalSDK/Framework",
 				);
 				INFOPLIST_FILE = "Le Pont Chaban Delmas Bordeaux/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -705,7 +729,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

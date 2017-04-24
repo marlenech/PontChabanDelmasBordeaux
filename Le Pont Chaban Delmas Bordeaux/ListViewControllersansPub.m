@@ -1,14 +1,12 @@
 //
-//  ViewController.m
+//  ListViewControllersansPub.m
 //  Le Pont Chaban Delmas Bordeaux
 //
-//  Created by Italik Design on 23/01/2015.
-//  Copyright (c) 2015 Italik Design. All rights reserved.
+//  Created by Italik Design on 23/04/2017.
+//  Copyright © 2017 Italik Design. All rights reserved.
 //
 
-
-
-#import "ListViewController.h"
+#import "ListViewControllersansPub.h"
 #import "Parser.h"
 #import "SWRevealViewController.h"
 #import <OneSignal/OneSignal.h>
@@ -20,7 +18,7 @@
 
 @import GoogleMobileAds;
 
-@interface ListViewController ()
+@interface ListViewControllersansPub ()
 
 @property (nonatomic, strong) NSArray *objects;
 @property (nonatomic, strong) NSCache *imageCache;
@@ -28,7 +26,7 @@
 
 @end
 
-@implementation ListViewController
+@implementation ListViewControllersansPub
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -47,47 +45,11 @@
     
     
     
-    
     self.title = @"Le Pont J. Chaban Delmas";
     self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
     
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
     
-    if ([standardDefaults objectForKey:@"areAdsRemoved"]) {
-        
-        
-        
-        UITableViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"pontchsanspub"];
-        
-        [self.navigationController pushViewController:controller animated:YES];
-        
-        
-        
-        
-    }
-    else{
-        
-        
-        // Replace this ad unit ID with your own ad unit ID.
-        self.bannerView.adUnitID = @"ca-app-pub-6606385851683433/4049724104";
-        self.bannerView.rootViewController = self;
-        GADBannerView *adView = [[GADBannerView alloc] initWithFrame:CGRectMake(0.0,0.0,
-                                                                                GAD_SIZE_320x50.width,
-                                                                                GAD_SIZE_320x50.height)];
-        adView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin |
-        UIViewAutoresizingFlexibleRightMargin;
-        [self.view addSubview:adView];
-        
-        GADRequest *request = [GADRequest request];
-        // Requests test ads on devices you specify. Your test device ID is printed to the console when
-        // an ad request is made. GADBannerView automatically returns test ads when running on a
-        // simulator.
-        request.testDevices = @[
-                                @"e01ea2821071428ab86d68fd89a69eea"  // mon iphone
-                                ];
-        [self.bannerView loadRequest:request];
-        
-    }
     
     
     
@@ -156,10 +118,8 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    
     return 1;
 }
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [_objects count];

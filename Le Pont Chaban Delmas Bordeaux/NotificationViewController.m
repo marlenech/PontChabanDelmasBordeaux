@@ -8,15 +8,53 @@
 
 #import "NotificationViewController.h"
 #import "SWRevealViewController.h"
+#import <OneSignal/OneSignal.h>
+
+@import GoogleMobileAds;
 
 @interface NotificationViewController ()
+
 
 @end
 
 @implementation NotificationViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    self.title = @"Les Notifications";
+    
+    NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
+    
+    //Switch Pont Chaban
+    
+    if ([standardDefaults objectForKey:@"switchKey"] == nil){
+        self.pontaq.on = [standardDefaults boolForKey:@"switchKey"];
+        self.pontaq.on = true;
+      [OneSignal setSubscription:true];
+        self.switchText.text=@"Vous recevez les notifications la veille de la levée du pont, ainsi que toutes les modifications de dernière minute en temps réel";}
+    
+    
+    else if ([standardDefaults boolForKey:@"switchKey"]) {
+        self.pontaq.on = [standardDefaults boolForKey:@"switchKey"];
+        [OneSignal setSubscription:true];
+        self.switchText.text=@"Vous recevez les notifications la veille de la levée du pont, ainsi que toutes les modifications de dernière minute en temps réel";}
+    
+    else {
+        
+        self.pontaq.on = false;
+        [OneSignal setSubscription:false];
+        self.switchText.text=@"Vous ne recevez pas les notifications.";
+        
+    }
+    
+    
+    
+    
+    
     
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
@@ -26,7 +64,11 @@
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
     
+    
+    
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -43,4 +85,38 @@
  }
  */
 
+//Pont Aquitaine
+
+- (IBAction)saveSwitchAq:(UISwitch *)sender {
+    
+    NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
+    
+    if ([self.pontaq isOn]) {
+        [standardDefaults setBool:YES forKey:@"switchKey"];
+        [OneSignal setSubscription:true];
+        self.switchText.text=@"Vous recevez les notifications la veille de la levée du pont, ainsi que toutes les modifications de dernière minute en temps réel.";
+        
+        
+        
+    } else {
+        
+        [standardDefaults setBool:NO forKey:@"switchKey"];
+        [OneSignal setSubscription:false];
+        self.switchText.text=@"Vous ne recevez pas les notifications.";
+        
+    }
+    
+    [standardDefaults synchronize];
+    
+}
+
+
+   
+
+
+
+
+
+
 @end
+

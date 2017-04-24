@@ -14,16 +14,15 @@
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
-    
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    
+    // ignore the style argument, use our own to override
+    self = [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseIdentifier];
     if (self) {
-        // Initialization code
+        // If you need any further customization
     }
     return self;
 }
 
 
 
-
 @end
+

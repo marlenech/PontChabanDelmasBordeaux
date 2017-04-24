@@ -12,7 +12,13 @@
 
 -(IBAction)link;
 -(IBAction)noter;
+-(IBAction)mail;
+-(IBAction)paquebots;
+-(IBAction)bordeaux;
+-(IBAction)twitter;
+-(IBAction)data;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
