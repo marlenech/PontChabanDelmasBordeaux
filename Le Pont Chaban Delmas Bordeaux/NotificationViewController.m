@@ -29,30 +29,120 @@
     
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
     
-    //Switch Pont Chaban
+    //Switch 06h30 à 09h30
     
     if ([standardDefaults objectForKey:@"switchKey"] == nil){
-        self.pontaq.on = [standardDefaults boolForKey:@"switchKey"];
-        self.pontaq.on = true;
-      [OneSignal setSubscription:true];
-        self.switchText.text=@"Vous recevez les notifications la veille de la levée du pont, ainsi que toutes les modifications de dernière minute en temps réel";}
+        self.premier.on = [standardDefaults boolForKey:@"switchKey"];
+        self.premier.on = true;
+        [OneSignal sendTag:@"0630a0930" value:@"0630a0930"];
+        [OneSignal deleteTag:@"aucun" ];
+        self.switchText.text=@"Vous recevez les notifications des levées situées entre 06h30 et 09h30, ainsi que toutes les modifications de dernière minute en temps réel.";}
     
     
     else if ([standardDefaults boolForKey:@"switchKey"]) {
-        self.pontaq.on = [standardDefaults boolForKey:@"switchKey"];
-        [OneSignal setSubscription:true];
-        self.switchText.text=@"Vous recevez les notifications la veille de la levée du pont, ainsi que toutes les modifications de dernière minute en temps réel";}
+        self.premier.on = [standardDefaults boolForKey:@"switchKey"];
+        self.switchText.text=@"Vous recevez les notifications des levées situées entre 06h30 et 09h30, ainsi que toutes les modifications de dernière minute en temps réel.";}
     
     else {
         
-        self.pontaq.on = false;
-        [OneSignal setSubscription:false];
-        self.switchText.text=@"Vous ne recevez pas les notifications.";
+        self.premier.on = false;
+        [OneSignal deleteTag:@"0630a0930" ];
+        self.switchText.text=@"Vous ne recevez pas les notifications des levées situées entre 06h30 et 09h30.";
         
     }
     
     
     
+    //Switch 09h30 à 16h30
+    
+    
+    
+    if ([standardDefaults objectForKey:@"switchKey2"] == nil){
+        self.deuxieme.on = [standardDefaults boolForKey:@"switchKey2"];
+        self.deuxieme.on = true;
+        [OneSignal sendTag:@"0930a1630" value:@"0930a1630"];
+        [OneSignal deleteTag:@"aucun" ];
+        self.switchText2.text=@"Vous recevez les notifications des levées situées entre 09h30 et 16h30, ainsi que toutes les modifications de dernière minute en temps réel.";}
+    
+    
+    else if ([standardDefaults boolForKey:@"switchKey2"]) {
+        self.deuxieme.on = [standardDefaults boolForKey:@"switchKey2"];
+        self.switchText2.text=@"Vous recevez les notifications des levées situées entre 09h30 et 16h30, ainsi que toutes les modifications de dernière minute en temps réel.";}
+    else {
+        
+        self.deuxieme.on = false;
+        [OneSignal deleteTag:@"0930a1630" ];
+        self.switchText2.text=@"Vous ne recevez pas les notifications des levées situées entre 09h30 et 16h30.";
+        
+    }
+    
+    //Switch 16h30 à 19h30
+    
+    
+    if ([standardDefaults objectForKey:@"switchKey3"] == nil){
+        self.troisieme.on = [standardDefaults boolForKey:@"switchKey3"];
+        self.troisieme.on = true;
+        [OneSignal sendTag:@"1630a1930" value:@"1630a1930"];
+        [OneSignal deleteTag:@"aucun" ];
+        self.switchText3.text=@"Vous recevez les notifications des levées situées entre 16h30 et 19h30, ainsi que toutes les modifications de dernière minute en temps réel.";}
+    
+    
+    else if ([standardDefaults boolForKey:@"switchKey3"]) {
+        self.troisieme.on = [standardDefaults boolForKey:@"switchKey3"];
+        self.switchText3.text=@"Vous recevez les notifications des levées situées entre 16h30 et 19h30, ainsi que toutes les modifications de dernière minute en temps réel.";}
+    
+    else {
+        
+        self.troisieme.on = false;
+        [OneSignal deleteTag:@"1630a1930" ];
+        self.switchText3.text=@"Vous ne recevez pas les notifications des levées situées entre 16h30 et 19h30.";
+        
+    }
+    
+    //Switch 19h30 à 06h30
+    
+    
+    if ([standardDefaults objectForKey:@"switchKey4"] == nil){
+        self.quatrieme.on = [standardDefaults boolForKey:@"switchKey4"];
+        self.quatrieme.on = true;
+        [OneSignal sendTag:@"1930a0630" value:@"1930a0630"];
+        [OneSignal deleteTag:@"aucun" ];
+        self.switchText4.text=@"Vous recevez les notifications des levées situées entre 19h30 et 06h30, ainsi que toutes les modifications de dernière minute en temps réel.";}
+    
+    
+    else if ([standardDefaults boolForKey:@"switchKey4"]) {
+        self.quatrieme.on = [standardDefaults boolForKey:@"switchKey4"];
+        self.switchText4.text=@"Vous recevez les notifications des levées situées entre 19h30 et 06h30, ainsi que toutes les modifications de dernière minute en temps réel.";}
+    
+    else {
+        
+        self.quatrieme.on = false;
+        [OneSignal deleteTag:@"1930a0630" ];
+        self.switchText4.text=@"Vous ne recevez pas les notifications des levées situées entre 19h30 et 06h30.";
+        
+    }
+    
+    //Switch week-end + jours fériés
+    
+    
+    if ([standardDefaults objectForKey:@"switchKey5"] == nil){
+        self.cinquieme.on = [standardDefaults boolForKey:@"switchKey5"];
+        self.cinquieme.on = true;
+        [OneSignal sendTag:@"weekend" value:@"weekend"];
+        [OneSignal deleteTag:@"aucun" ];
+        self.switchText5.text=@"Vous recevez les notifications des levées des week-ends et jours fériés, ainsi que toutes les modifications de dernière minute en temps réel.";}
+    
+    
+    else if ([standardDefaults boolForKey:@"switchKey5"]) {
+        self.cinquieme.on = [standardDefaults boolForKey:@"switchKey5"];
+        self.switchText5.text=@"Vous recevez les notifications des levées des week-ends et jours fériés, ainsi que toutes les modifications de dernière minute en temps réel.";}
+    else {
+        
+        self.cinquieme.on = false;
+        [OneSignal deleteTag:@"weekend" ];
+        self.switchText5.text=@"Vous ne recevez pas les notifications des levées des week-ends et jours fériés.";
+        
+    }
     
     
     
@@ -85,24 +175,26 @@
  }
  */
 
-//Pont Aquitaine
+//de 06h30 à 09h30
 
-- (IBAction)saveSwitchAq:(UISwitch *)sender {
+- (IBAction)saveSwitch:(UISwitch *)sender {
     
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
     
-    if ([self.pontaq isOn]) {
+    if ([self.premier isOn]) {
         [standardDefaults setBool:YES forKey:@"switchKey"];
-        [OneSignal setSubscription:true];
-        self.switchText.text=@"Vous recevez les notifications la veille de la levée du pont, ainsi que toutes les modifications de dernière minute en temps réel.";
+        [OneSignal sendTag:@"0630a0930" value:@"0630a0930"];
+        [OneSignal deleteTag:@"aucun" ];
+        self.switchText.text=@"Vous recevez les notifications des levées situées entre 06h30 et 09h30, ainsi que toutes les modifications de dernière minute en temps réel.";
         
         
         
     } else {
         
         [standardDefaults setBool:NO forKey:@"switchKey"];
-        [OneSignal setSubscription:false];
-        self.switchText.text=@"Vous ne recevez pas les notifications.";
+        [OneSignal deleteTag:@"0630a0930" ];
+        [OneSignal sendTag:@"aucun" value:@"aucun"];
+        self.switchText.text=@"Vous ne recevez pas les notifications des levées situées entre 06h30 et 09h30.";
         
     }
     
@@ -111,12 +203,127 @@
 }
 
 
-   
+//09h30 à 16h30
+
+- (IBAction)saveSwitch2:(UISwitch *)sender {
+    
+    NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
+    
+    if ([self.deuxieme isOn]) {
+        [standardDefaults setBool:YES forKey:@"switchKey2"];
+        [OneSignal sendTag:@"0930a1630" value:@"0930a1630"];
+        [OneSignal deleteTag:@"aucun" ];
+        self.switchText2.text=@"Vous recevez les notifications des levées situées entre 09h30 et 16h30, ainsi que toutes les modifications de dernière minute en temps réel.";
+        
+        
+        
+    } else {
+        
+        [standardDefaults setBool:NO forKey:@"switchKey2"];
+        [OneSignal deleteTag:@"0930a1630" ];
+        [OneSignal sendTag:@"aucun" value:@"aucun"];
+        self.switchText2.text=@"Vous ne recevez pas les notifications des levées situées entre 09h30 et 16h30.";
+        
+    }
+    
+    
+    [standardDefaults synchronize];
+    
+}
+
+//16h30 à 19h30
+
+- (IBAction)saveSwitch3:(UISwitch *)sender {
+    
+    NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
+    
+    if ([self.troisieme isOn]) {
+        [standardDefaults setBool:YES forKey:@"switchKey3"];
+        [OneSignal sendTag:@"1630a1930" value:@"1630a1930"];
+        [OneSignal deleteTag:@"aucun" ];
+        self.switchText3.text=@"Vous recevez les notifications des levées situées entre 16h30 et 19h30, ainsi que toutes les modifications de dernière minute en temps réel.";
+        
+        
+        
+    } else {
+        
+        [standardDefaults setBool:NO forKey:@"switchKey3"];
+        [OneSignal deleteTag:@"1630a1930" ];
+        [OneSignal sendTag:@"aucun" value:@"aucun"];
+        self.switchText3.text=@"Vous ne recevez pas les notifications des levées situées entre 16h30 et 19h30.";
+        
+    }
+    
+    
+    [standardDefaults synchronize];
+    
+}
+
+//19h30 à 06h30
+
+- (IBAction)saveSwitch4:(UISwitch *)sender {
+    
+    NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
+    
+    if ([self.quatrieme isOn]) {
+        [standardDefaults setBool:YES forKey:@"switchKey4"];
+        [OneSignal sendTag:@"1930a0630" value:@"1930a0630"];
+        [OneSignal deleteTag:@"aucun" ];
+        self.switchText4.text=@"Vous recevez les notifications des levées situées entre 19h30 et 06h30, ainsi que toutes les modifications de dernière minute en temps réel.";
+        
+        
+        
+    } else {
+        
+        [standardDefaults setBool:NO forKey:@"switchKey4"];
+        [OneSignal deleteTag:@"1930a0630" ];
+        [OneSignal sendTag:@"aucun" value:@"aucun"];
+        self.switchText4.text=@"Vous ne recevez pas les notifications des levées situées entre 19h30 et 06h30.";
+        
+    }
+    
+    
+    [standardDefaults synchronize];
+    
+}
+
+//weekend et jours fériés
+
+- (IBAction)saveSwitch5:(UISwitch *)sender {
+    
+    NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
+    
+    if ([self.cinquieme isOn]) {
+        [standardDefaults setBool:YES forKey:@"switchKey5"];
+        [OneSignal sendTag:@"weekend" value:@"weekend"];
+        [OneSignal deleteTag:@"aucun" ];
+        self.switchText5.text=@"Vous recevez les notifications des levées des week-ends et jours fériés, ainsi que toutes les modifications de dernière minute en temps réel.";
+        
+        
+        
+    } else {
+        
+        [standardDefaults setBool:NO forKey:@"switchKey5"];
+        [OneSignal deleteTag:@"weekend" ];
+        [OneSignal sendTag:@"aucun" value:@"aucun"];
+        self.switchText5.text=@"Vous ne recevez pas les notifications des levées des week-ends et jours fériés.";
+        
+    }
+    
+    
+    [standardDefaults synchronize];
+    
+}
 
 
 
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    if (scrollView.contentOffset.y > 60) {
+        [scrollView setContentOffset:CGPointMake(0, 60)];
+    }
+}
 
 
 @end
-

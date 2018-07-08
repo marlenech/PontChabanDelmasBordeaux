@@ -38,28 +38,114 @@
         
         
         
-        NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
-        
-        NSString *pontTypeAq = @"switchKey";
+    NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
     
+    NSString *pontType = @"switchKey";
+    NSString *pontType2 = @"switchKey2";
+    NSString *pontType3 = @"switchKey3";
+    NSString *pontType4 = @"switchKey4";
+    NSString *pontType5 = @"switchKey5";
+    
+    if([standardDefaults objectForKey:kRemindMeLater] == nil) {
+        [standardDefaults setBool:YES forKey:kRemindMeLater];
+    }
+    
+    if([standardDefaults boolForKey:pontType] == YES) {
         
-        if([standardDefaults objectForKey:kRemindMeLater] == nil) {
-            [standardDefaults setBool:YES forKey:kRemindMeLater];
-        }
+        // Do Something
+        [OneSignal sendTag:@"0630a0930" value:@"0630a0930"];
+        [OneSignal deleteTag:@"aucun"];
+    }
+    
+    else if ([standardDefaults objectForKey:pontType] == nil){
+        [OneSignal sendTag:@"0630a0930" value:@"0630a0930"];
         
-        if([standardDefaults boolForKey:pontTypeAq] == YES) {
-            [OneSignal setSubscription:true];
-            
-            // Do Something
-                    }
+        // Do Something Else
+        [OneSignal deleteTag:@"aucun"];
+    }
+    else {
+        [OneSignal sendTag:@"aucun" value:@"aucun"];
+        [OneSignal deleteTag:@"0630a0930"];
+        [standardDefaults setBool:NO forKey:@"switchKey"];
+    }
+    
+    if([standardDefaults boolForKey:pontType2] == YES) {
         
-        else if ([standardDefaults objectForKey:pontTypeAq] == nil){
-            [OneSignal setSubscription:true];
-            
-        }
-        else {
-            [OneSignal setSubscription:false];
-        }
+        // Do Something
+        [OneSignal sendTag:@"0930a1630" value:@"0930a1630"];
+        [OneSignal deleteTag:@"aucun"];
+    }
+    
+    else if ([standardDefaults objectForKey:pontType2] == nil){
+        [OneSignal sendTag:@"0930a1630" value:@"0930a1630"];
+        
+        // Do Something Else
+        [OneSignal deleteTag:@"aucun"];
+    }
+    else {
+        [OneSignal sendTag:@"aucun" value:@"aucun"];
+        [OneSignal deleteTag:@"0930a1630"];
+        [standardDefaults setBool:NO forKey:@"switchKey2"];
+    }
+    
+    if([standardDefaults boolForKey:pontType3] == YES) {
+        
+        // Do Something
+        [OneSignal sendTag:@"1630a1930" value:@"1630a1930"];
+        [OneSignal deleteTag:@"aucun"];
+    }
+    
+    else if ([standardDefaults objectForKey:pontType3] == nil){
+        [OneSignal sendTag:@"1630a1930" value:@"1630a1930"];
+        
+        // Do Something Else
+        [OneSignal deleteTag:@"aucun"];
+    }
+    else {
+        [OneSignal sendTag:@"aucun" value:@"aucun"];
+        [OneSignal deleteTag:@"1630a1930"];
+        [standardDefaults setBool:NO forKey:@"switchKey3"];
+    }
+    
+    if([standardDefaults boolForKey:pontType4] == YES) {
+        
+        // Do Something
+        [OneSignal sendTag:@"1930a0630" value:@"1930a0630"];
+        [OneSignal deleteTag:@"aucun"];
+    }
+    
+    else if ([standardDefaults objectForKey:pontType4] == nil){
+        [OneSignal sendTag:@"1930a0630" value:@"1930a0630"];
+        
+        // Do Something Else
+        [OneSignal deleteTag:@"aucun"];
+    }
+    else {
+        [OneSignal sendTag:@"aucun" value:@"aucun"];
+        [OneSignal deleteTag:@"1930a0630"];
+        [standardDefaults setBool:NO forKey:@"switchKey4"];
+    }
+    
+    if([standardDefaults boolForKey:pontType5] == YES) {
+        
+        // Do Something
+        [OneSignal sendTag:@"weekend" value:@"weekend"];
+        [OneSignal deleteTag:@"aucun"];
+    }
+    
+    else if ([standardDefaults objectForKey:pontType5] == nil){
+        [OneSignal sendTag:@"weekend" value:@"weekend"];
+        
+        // Do Something Else
+        [OneSignal deleteTag:@"aucun"];
+    }
+    else {
+        [OneSignal sendTag:@"aucun" value:@"aucun"];
+        [OneSignal deleteTag:@"weekend"];
+        [standardDefaults setBool:NO forKey:@"switchKey5"];
+    }
+    
+
         
     
         

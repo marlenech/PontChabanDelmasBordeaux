@@ -14,8 +14,17 @@
 
 @interface NotificationViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
-@property (strong, nonatomic) IBOutlet UISwitch *pontaq;
+@property (strong, nonatomic) IBOutlet UISwitch *premier;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UISwitch *deuxieme;
+@property (strong, nonatomic) IBOutlet UISwitch *troisieme;
+@property (strong, nonatomic) IBOutlet UISwitch *quatrieme;
+@property (strong, nonatomic) IBOutlet UISwitch *cinquieme;
 @property (weak, nonatomic) IBOutlet UILabel *switchText;
+@property (weak, nonatomic) IBOutlet UILabel *switchText2;
+@property (weak, nonatomic) IBOutlet UILabel *switchText3;
+@property (weak, nonatomic) IBOutlet UILabel *switchText4;
+@property (weak, nonatomic) IBOutlet UILabel *switchText5;
 
 
 @end
