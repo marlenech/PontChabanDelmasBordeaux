@@ -69,7 +69,7 @@
         
         
         // Replace this ad unit ID with your own ad unit ID.
-        self.bannerView.adUnitID = @"ca-app-pub-6606385851683433/4049724104";
+        self.bannerView.adUnitID = @"ca-app-pub-6606385851683433/2107252906";
         self.bannerView.rootViewController = self;
         GADBannerView *adView = [[GADBannerView alloc] initWithFrame:CGRectMake(0.0,0.0,
                                                                                 GAD_SIZE_320x50.width,
